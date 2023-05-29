@@ -1,0 +1,17 @@
+server:
+  port: 8080
+logging:
+  level:
+    ru.podgoretskaya: DEBUG
+
+spring:
+  datasource:
+    driver_class_name:
+      org.postgresql.Driver
+    url:
+      jdbc:postgresql://localhost:5432/SecretsOfSanta
+    username: postgres
+    password: 123
+  jpa:
+    hibernate:
+     ddl-auto: 'update'

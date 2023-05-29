@@ -1,0 +1,63 @@
+{
+"firstName": "Ivan",
+"lastName": "Petrov",
+"serviceNumber": "0356",
+"hobby": "",
+"giftIdeas": ""
+}
+
+{
+"firstName": "Anna",
+"lastName": "Ivanova",
+"serviceNumber": "0524",
+"hobby": "motorcycle racing",
+"giftIdeas": "helmet"
+}
+
+{
+"firstName": "Maksim ",
+"lastName": "Marinin",
+"serviceNumber": "102",
+"hobby": "knitting",
+"giftIdeas": "spokes"
+}
+
+{
+"firstName": "Ilya",
+"lastName": "Muromets",
+"serviceNumber": "810",
+"hobby": "",
+"giftIdeas": ""
+}
+
+{
+"firstName": "Sergei",
+"lastName": "Malinin",
+"serviceNumber": "010",
+"hobby": "hookah",
+"giftIdeas": "bowl"
+}
+
+{
+"firstName": "Pavel",
+"lastName": "Andreev",
+"serviceNumber": "094",
+"hobby": "",
+"giftIdeas": ""
+}
+
+{
+"firstName": "Oleg",
+"lastName": "Pavlov",
+"serviceNumber": "0529",
+"hobby": "",
+"giftIdeas": ""
+}
+
+{
+"firstName": "Mihail",
+"lastName": "Efremov",
+"serviceNumber": "0124",
+"hobby": "",
+"giftIdeas": ""
+}
