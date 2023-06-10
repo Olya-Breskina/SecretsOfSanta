@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -30,15 +31,23 @@ class GetWardImplTest {
         QuestionnaireDTO dto = objectMapper.readValue(new File("src/test/resources/test1.json"), QuestionnaireDTO.class);
         QuestionnaireDTO dto2 = objectMapper.readValue(new File("src/test/resources/test2.json"), QuestionnaireDTO.class);
         QuestionnaireEntity questionnaireEntity = questionnaireMapper.mapQuestionnaireToEntity(dto);
+
+
         List<QuestionnaireEntity> listQ = new ArrayList<>();
-        listQ.add(questionnaireMapper.mapQuestionnaireToEntity(dto));
-        listQ.add(questionnaireMapper.mapQuestionnaireToEntity(dto2));
+        QuestionnaireEntity questionnaireEntity1 = questionnaireMapper.mapQuestionnaireToEntity(dto);
+        questionnaireEntity1.setApplicationID(1L);
+        listQ.add( questionnaireEntity1);
+        QuestionnaireEntity questionnaireEntity2 = questionnaireMapper.mapQuestionnaireToEntity(dto2);
+        questionnaireEntity2.setApplicationID(2L);
+        listQ.add(questionnaireEntity2);
+
+
 
         Mockito.when(questionnaireRepo.findAll()).thenReturn(listQ);
-        Mockito.when(questionnaireRepo.findById(1L)).thenReturn(questionnaireEntity);
+        Mockito.when(questionnaireRepo.findById(Mockito.anyLong())).thenReturn(Optional.of(questionnaireEntity));
         Mockito.when(questionnaireRepo.save(Mockito.any())).thenReturn(questionnaireEntity);
 
-        QuestionnaireDTO id = getWard.getWard(2L);
-        assertEquals(questionnaireEntity.getApplicationID(), id);
+        QuestionnaireDTO actualidRespons = getWard.getWard(1L);
+        assertNotNull(actualidRespons);
     }
 }

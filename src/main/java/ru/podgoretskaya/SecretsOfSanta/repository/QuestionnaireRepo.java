@@ -12,5 +12,5 @@ public interface QuestionnaireRepo extends JpaRepository<QuestionnaireEntity, Lo
     List<Long> findAllIds();// в каком виде олучить отвыт название метода (логика метода  выше)
 
     @Query(value = "SELECT q.participant_is_busy FROM questionnaire q",nativeQuery = true)
-    List<Long> findAllParticipantIsBusy();// в каком виде олучить отвыт название метода (логика метода  выше)
+    List<Long> findAllParticipantIsBusy();// в каком виде получить ответ название метода (логика метода  выше)
 }

@@ -25,7 +25,6 @@ import java.util.List;
 public class APIController {
     private final FillingOutTheQuestionnaire fillingOutTheQuestionnaire;
     private final GetWard getWard;
-    private  final QuestionnaireRepo q;
 
     @PostMapping("/in")
     @Operation(summary = "заполнение анкеты для участия в игре")
